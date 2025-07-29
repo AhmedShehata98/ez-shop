@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+:root {
+  --primary-100: #f0f1ff;
+  --primary-200: #e3e5ff;
+  --primary-300: #b7bfff;
+  --primary-400: #a8b2ff;
+  --primary-500: #97a6ff;
+  --primary-600: #869aff;
+  --primary-700: #728fff;
+  --primary-800: #5c83ff;
+  --primary-900: #4078ff;
+
+  --neutral-100: #e6e7e8;
+  --neutral-200: #b6b7bc;
+  --neutral-300: #878a92;
+  --neutral-400: #71747e;
+  --neutral-500: #5c5f6a;
+  --neutral-600: #474b57;
+  --neutral-700: #333845;
+  --neutral-800: #202533;
+  --neutral-900: #0e1422;
+
+  --neutral-white-100: #f6f6f6;
+  --neutral-white-200: #e9e9eb;
+  --neutral-white-900: #ffffff;
+
+  --container-width: 100%;
+  --container-padding: 2rem;
+  --app-header-height: 84px;
+}
+
+@theme {
+  --color-primary-100: var(--primary-100);
+  --color-primary-200: var(--primary-200);
+  --color-primary-300: var(--primary-300);
+  --color-primary-400: var(--primary-400);
+  --color-primary-500: var(--primary-500);
+  --color-primary-600: var(--primary-600);
+  --color-primary-700: var(--primary-700);
+  --color-primary-800: var(--primary-800);
+  --color-primary-900: var(--primary-900);
+
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-200: var(--neutral-200);
+  --color-neutral-300: var(--neutral-300);
+  --color-neutral-400: var(--neutral-400);
+  --color-neutral-500: var(--neutral-500);
+  --color-neutral-600: var(--neutral-600);
+  --color-neutral-700: var(--neutral-700);
+  --color-neutral-800: var(--neutral-800);
+  --color-neutral-900: var(--neutral-900);
+
+  --color-neutral-white-100: var(--neutral-white-100);
+  --color-neutral-white-200: var(--neutral-white-200);
+  --color-neutral-white-900: var(--neutral-white-900);
+}
+
+@layer base {
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .app-container {
+    @apply container w-(--container-width) px-(--container-padding) mx-auto transition-[width];
+  }
+  @media screen and (min-width: 367px) {
+    :root {
+      --container-width: 100%;
+      --container-padding: 1rem;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    :root {
+      --container-width: 100%;
+      --container-padding: 1.5rem;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    :root {
+      --container-width: 770px;
+      --container-padding: 2rem;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    :root {
+      --container-width: 992px;
+      --container-padding: 2rem;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    :root {
+      --container-width: 1024px;
+      --container-padding: 4rem;
+    }
+  }
+  @media screen and (min-width: 1366px) {
+    :root {
+      --container-width: 1080px;
+      --container-padding: 5rem;
+    }
+  }
+  .shadow-sm {
+    border: 1px solid #f1f4f9;
+  }
+  .shadow-md {
+    box-shadow: 4px 4px 4px 0px #0000000d;
+  }
+}
