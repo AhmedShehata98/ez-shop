@@ -1,3 +1,72 @@
 {
-  "welcome": "مرحبا بك في التجارة الالكترونية"
+  "layout": {
+    "AppHeader": {
+      "title": "إي كوميرس",
+      "search_placeholder": "ابحث عن المنتجات",
+      "nav": {
+        "home": "الرئيسية",
+        "categories": "التصنيفات",
+        "kitchen": "المطبخ",
+        "sports": "رياضة",
+        "toys": "ألعاب",
+        "electronics": "إلكترونيات",
+        "about": "عن الشركة",
+        "contact": "اتصل بنا"
+      }
+    },
+    "AppFooter": {
+      "title": "إي كوميرس",
+      "desc": "ديف كت قناة يوتيوب لتعلم المشاريع العملية.",
+      "sections": {
+        "shop": "تسوق",
+        "my_account": "حسابي",
+        "checkout": "الدفع",
+        "cart": "عربة التسوق",
+        "company": "الشركة",
+        "about_us": "عن الشركة",
+        "contact": "اتصل بنا",
+        "careers": "وظائف",
+        "support": "الدعم",
+        "faq": "الأسئلة الشائعة",
+        "terms_of_use": "شروط الاستخدام",
+        "privacy_policy": "سياسة الخصوصية",
+        "accepted_payments": "طرق الدفع المقبولة"
+      }
+    }
+  },
+  "products": {
+    "ProductCard": {
+      "price": "٢٢.٠٠"
+    }
+  },
+  "index": {
+    "banner": {
+      "fresh_arrivals": "أحدث المنتجات أونلاين",
+      "discover_collection": "اكتشف أحدث تشكيلتنا اليوم.",
+      "view_collection": "شوف المجموعة",
+      "browse_fashion": "استكشف جنة الموضة!",
+      "explore_collection": "ادخل عالم الموضة واستكشف تشكيلتنا المتنوعة من الملابس.",
+      "start_browsing": "ابدأ التصفح"
+    },
+    "features": {
+      "free_shipping": "شحن مجاني",
+      "free_shipping_desc": "جدّد ستايلك النهاردة وخد شحن مجاني على كل الطلبات! متفوتش الفرصة.",
+      "satisfaction_guarantee": "ضمان الرضا",
+      "satisfaction_guarantee_desc": "تسوق وانت مطمن مع ضمان الرضا: يا تعجبك يا نرجعلك فلوسك.",
+      "secure_payment": "دفع آمن",
+      "secure_payment_desc": "أمانك أولويتنا. مدفوعاتك في أمان معانا."
+    },
+    "products": {
+      "shop_now": "تسوق الآن",
+      "best_selling": "الأكثر مبيعًا",
+      "featured": "مميز",
+      "latest": "الاحدث"
+    },
+    "newsletter": {
+      "join_newsletter": "انضم للنشرة البريدية",
+      "newsletter_gift": "بنحب نفاجئ مشتركينا بهدايا من وقت للتاني.",
+      "subscribe": "اشترك",
+      "your_email": "بريدك الإلكتروني"
+    }
+  }
 }

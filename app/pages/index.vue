@@ -10,16 +10,16 @@
           <h4
             class="text-neutral-800 text-start font-semibold text-4xl capitalize"
           >
-            Fresh Arrivals Online
+            {{ $t("index.banner.fresh_arrivals") }}
           </h4>
           <p class="text-neutral-600 text-start font-normal text-sm">
-            Discover Our Newest Collection Today.
+            {{ $t("index.banner.discover_collection") }}
           </p>
           <button
             type="button"
             class="flex items-center justify-center gap-3 px-3 py-2 rounded-md text-white bg-neutral-900 mt-5"
           >
-            <p class="text-inherit">View Collection</p>
+            <p class="text-inherit">{{ $t("index.banner.view_collection") }}</p>
             <Icon name="si:arrow-right-duotone" class="text-inherit text-2xl" />
           </button>
         </span>
@@ -71,10 +71,10 @@
         <p
           class="font-medium text-xs text-neutral-300 justify-self-start text-start"
         >
-          Shop Now
+          {{ $t("index.products.shop_now") }}
         </p>
         <h3 class="text-neutral-900 text-start font-bold text-2xl">
-          Best Selling
+          {{ $t("index.products.best_selling") }}
         </h3>
       </span>
       <ul
@@ -97,17 +97,16 @@
           <h4
             class="text-neutral-800 text-start font-semibold text-4xl capitalize"
           >
-            Browse Our Fashion Paradise!
+            {{ $t("index.banner.browse_fashion") }}
           </h4>
           <p class="text-neutral-600 text-start font-normal text-sm">
-            Step into a world of style and explore our diverse collection of
-            clothing categories.
+            {{ $t("index.banner.explore_collection") }}
           </p>
           <button
             type="button"
             class="flex items-center justify-center gap-3 px-3 py-2 rounded-md text-white bg-neutral-900 mt-5"
           >
-            <p class="text-inherit">Start Browsing</p>
+            <p class="text-inherit">{{ $t("index.banner.start_browsing") }}</p>
             <Icon name="si:arrow-right-duotone" class="text-inherit text-2xl" />
           </button>
         </span>
@@ -130,7 +129,7 @@
             type="button"
             class="flex items-center justify-center px-3 py-2 rounded-full border border-neutral-white-200 text-sm text-neutral-800 font-medium capitalize"
           >
-            featured
+            {{ $t("index.products.featured") }}
           </button>
         </li>
         <!-- non-active btn -->
@@ -139,7 +138,7 @@
             type="button"
             class="flex items-center justify-center px-3 py-2 rounded-full text-sm text-neutral-500 font-normal capitalize"
           >
-            featured
+            {{ $t("index.products.latest") }}
           </button>
         </li>
       </ul>
@@ -159,10 +158,10 @@
       >
         <span class="flex flex-col gap-6">
           <h3 class="text-2xl font-bold text-neutral-900 text-start">
-            Join Our Newsletter
+            {{ $t("index.newsletter.join_newsletter") }}
           </h3>
           <p class="text-neutral-500 text-sm font-normal">
-            We love to surprise our subscribers with occasional gifts.
+            {{ $t("index.newsletter.newsletter_gift") }}
           </p>
         </span>
         <form action="" class="flex items-center justify-center gap-4">
@@ -170,14 +169,14 @@
             id="subscribe-email"
             type="email"
             name="subscribe-email"
-            placeholder="Your email address"
+            :placeholder="$t('index.newsletter.your_email')"
             class="bg-inherit border py-1.5 px-6 border-neutral-white-200 shadow-xs rounded-md focus:outline-none focus:bg-white text-neutral-300 placeholder:text-neutral-300"
           />
           <button
             type="submit"
             class="bg-neutral-900 rounded-md py-1.5 px-6 text-white"
           >
-            Subscribe
+            {{ $t("index.newsletter.subscribe") }}
           </button>
         </form>
       </div>
@@ -190,21 +189,18 @@ import ProductCard from "~/components/products/ProductCard.vue";
 const FEATURES_LIST = [
   {
     icon: "material-symbols-light:local-shipping-rounded",
-    title: "Free Shipping",
-    description:
-      "Upgrade your style today and get FREE shipping on all orders! Don't miss out.",
+    title: $t("index.features.free_shipping"),
+    description: $t("index.features.free_shipping_desc"),
   },
   {
     icon: "ph:seal-check-fill",
-    title: "Satisfaction Guarantee",
-    description:
-      "Shop confidently with our Satisfaction Guarantee: Love it or get a refund.",
+    title: $t("index.features.satisfaction_guarantee"),
+    description: $t("index.features.satisfaction_guarantee_desc"),
   },
   {
     icon: "mdi:secure",
-    title: "Secure Payment",
-    description:
-      "Your security is our priority. Your payments are secure with us.",
+    title: $t("index.features.secure_payment"),
+    description: $t("index.features.secure_payment_desc"),
   },
 ];
 </script>

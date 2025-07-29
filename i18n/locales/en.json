@@ -1,3 +1,72 @@
 {
-  "welcome": "welcome to e-commerce"
+  "layout": {
+    "AppHeader": {
+      "title": "Ecommerce",
+      "search_placeholder": "search products",
+      "nav": {
+        "home": "home",
+        "categories": "categories",
+        "kitchen": "kitchen",
+        "sports": "sports",
+        "toys": "toys",
+        "electronics": "electronics",
+        "about": "about",
+        "contact": "contact"
+      }
+    },
+    "AppFooter": {
+      "title": "Ecommerce",
+      "desc": "DevCut is a YouTube channel for practical project-based learning.",
+      "sections": {
+        "shop": "SHOP",
+        "my_account": "My Account",
+        "checkout": "Checkout",
+        "cart": "Cart",
+        "company": "COMPANY",
+        "about_us": "About us",
+        "contact": "Contact",
+        "careers": "Careers",
+        "support": "SUPPORT",
+        "faq": "FAQ",
+        "terms_of_use": "Terms of use",
+        "privacy_policy": "Privacy Policy",
+        "accepted_payments": "ACCEPTED PAYMENTS"
+      }
+    }
+  },
+  "products": {
+    "ProductCard": {
+      "price": "22.00"
+    }
+  },
+  "index": {
+    "banner": {
+      "fresh_arrivals": "Fresh Arrivals Online",
+      "discover_collection": "Discover Our Newest Collection Today.",
+      "view_collection": "View Collection",
+      "browse_fashion": "Browse Our Fashion Paradise!",
+      "explore_collection": "Step into a world of style and explore our diverse collection of clothing categories.",
+      "start_browsing": "Start Browsing"
+    },
+    "features": {
+      "free_shipping": "Free Shipping",
+      "free_shipping_desc": "Upgrade your style today and get FREE shipping on all orders! Don't miss out.",
+      "satisfaction_guarantee": "Satisfaction Guarantee",
+      "satisfaction_guarantee_desc": "Shop confidently with our Satisfaction Guarantee: Love it or get a refund.",
+      "secure_payment": "Secure Payment",
+      "secure_payment_desc": "Your security is our priority. Your payments are secure with us."
+    },
+    "products": {
+      "shop_now": "Shop Now",
+      "best_selling": "Best Selling",
+      "featured": "featured",
+      "latest": "latest"
+    },
+    "newsletter": {
+      "join_newsletter": "Join Our Newsletter",
+      "newsletter_gift": "We love to surprise our subscribers with occasional gifts.",
+      "subscribe": "Subscribe",
+      "your_email": "Your email address"
+    }
+  }
 }

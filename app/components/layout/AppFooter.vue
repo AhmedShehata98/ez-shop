@@ -6,60 +6,68 @@
       <!-- logo and description -->
       <div class="flex flex-col items-start justify-start gap-3.5 mt-4">
         <h3 class="text-xl font-bold text-neutral-900 capitalize text-start">
-          Ecommerce
+          {{ $t("layout.AppFooter.title") }}
         </h3>
         <p class="font-normal text-sm capitalize text-neutral-500">
-          DevCut is a YouTube channel for practical project-based learning.
+          {{ $t("layout.AppFooter.desc") }}
         </p>
       </div>
       <!-- website links -->
       <ul class="w-full grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
         <div class="flex flex-col gap-9">
-          <h4 class="text-neutral-300 font-medium">SHOP</h4>
+          <h4 class="text-neutral-300 font-medium">
+            {{ $t("layout.AppFooter.sections.shop") }}
+          </h4>
           <ul class="grid grid-flow-row-dense gap-4 text-neutral-500">
             <nuxt-link href="#" class="text-inherit font-medium">
-              My Account
+              {{ $t("layout.AppFooter.sections.my_account") }}
             </nuxt-link>
             <nuxt-link href="#" class="text-inherit font-medium">
-              Checkout
+              {{ $t("layout.AppFooter.sections.checkout") }}
             </nuxt-link>
             <nuxt-link href="#" class="text-inherit font-medium">
-              Cart
+              {{ $t("layout.AppFooter.sections.cart") }}
             </nuxt-link>
           </ul>
         </div>
         <div class="flex flex-col gap-9">
-          <h4 class="text-neutral-300 font-medium">COMPANY</h4>
+          <h4 class="text-neutral-300 font-medium">
+            {{ $t("layout.AppFooter.sections.company") }}
+          </h4>
           <ul class="grid grid-flow-row-dense gap-4 text-neutral-500">
             <nuxt-link href="/about-us" class="text-inherit font-medium">
-              About us
+              {{ $t("layout.AppFooter.sections.about_us") }}
             </nuxt-link>
             <nuxt-link href="/contact" class="text-inherit font-medium">
-              Contact
+              {{ $t("layout.AppFooter.sections.contact") }}
             </nuxt-link>
             <nuxt-link href="/careers" class="text-inherit font-medium">
-              Careers
+              {{ $t("layout.AppFooter.sections.careers") }}
             </nuxt-link>
           </ul>
         </div>
         <div class="flex flex-col gap-9">
-          <h4 class="text-neutral-300 font-medium">SUPPORT</h4>
+          <h4 class="text-neutral-300 font-medium">
+            {{ $t("layout.AppFooter.sections.support") }}
+          </h4>
           <ul class="grid grid-flow-row-dense gap-4 text-neutral-500">
             <nuxt-link href="/faq" class="text-inherit font-medium">
-              FAQ
+              {{ $t("layout.AppFooter.sections.faq") }}
             </nuxt-link>
             <nuxt-link href="/terms-of-use" class="text-inherit font-medium">
-              Terms of use
+              {{ $t("layout.AppFooter.sections.terms_of_use") }}
             </nuxt-link>
             <nuxt-link href="/privacy-policy" class="text-inherit font-medium">
-              Privacy Policy
+              {{ $t("layout.AppFooter.sections.privacy_policy") }}
             </nuxt-link>
           </ul>
         </div>
       </ul>
       <!-- payment accept -->
       <div class="flex flex-col gap-8">
-        <h3 class="text-neutral-300">ACCEPTED PAYMENTS</h3>
+        <h3 class="text-neutral-300">
+          {{ $t("layout.AppFooter.sections.accepted_payments") }}
+        </h3>
         <ul class="w-full grid grid-cols-3 items-center justify-start gap-x-2">
           <li>
             <svg

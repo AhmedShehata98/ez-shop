@@ -4,7 +4,9 @@
   >
     <!-- logo -->
     <nuxt-link href="/">
-      <h3 class="text-xl capitalize font-extrabold">Ecommerce</h3>
+      <h3 class="text-xl capitalize font-extrabold">
+        {{ $t("layout.AppHeader.title") }}
+      </h3>
     </nuxt-link>
     <!-- navigation links -->
     <nav class="max-lg:hidden flex items-center justify-center gap-3">
@@ -60,7 +62,7 @@
         id="search-query"
         type="search"
         name="search-query"
-        placeholder="search products"
+        :placeholder="$t('layout.AppHeader.search_placeholder')"
         class="h-full text-inherit px-2 focus:outline-none text-sm"
       />
     </form>
@@ -147,6 +149,29 @@
           />
         </svg>
       </button>
+      <button
+        type="button"
+        class="relative flex items-center justify-center p-2 text-neutral-500 rounded-sm text-2xl hover:bg-neutral-100"
+        @click="showLocalesMenu = !showLocalesMenu"
+      >
+        <Icon name="material-symbols-light:language" />
+        <ul
+          class="absolute top-full right-0 border border-neutral-100 w-36 h-fit grid grid-flow-row-dense p-1 bg-neutral-50 rounded-sm shadow-xl transition-all mt-1"
+          :class="
+            !showLocalesMenu &&
+            '-translate-y-2 translate-x-1 opacity-0 scale-98 pointer-events-none'
+          "
+        >
+          <button
+            v-for="localeItem in locales"
+            :key="localeItem.code"
+            class="px-2 py-2.5 leading-3 text-start text-neutral-500 text-sm font-medium capitalize rounded-sm hover:bg-neutral-100"
+            @click="handleToggleLang(localeItem.code)"
+          >
+            {{ localeItem.name }}
+          </button>
+        </ul>
+      </button>
       <!-- button to toggle mobile nav menu -->
       <button
         type="button"
@@ -210,43 +235,45 @@
 </template>
 <script setup lang="ts">
 const route = useRoute();
-const { locale } = useI18n();
+const router = useRouter();
+const { locale, locales } = useI18n();
+const switchLocalePath = useSwitchLocalePath();
 const showNestedNavLinks = shallowRef(false);
 const showNestedMobileNavLinks = shallowRef(false);
+const showLocalesMenu = shallowRef(false);
 const showMobileNavMenu = shallowRef(false);
-
 const NAV_LINKS = [
   {
-    label: "home",
+    label: $t("layout.AppHeader.nav.home"),
     isActive: route.fullPath === `/${locale.value}`,
     href: `${locale.value}`,
     children: [],
   },
   {
-    label: "categories",
+    label: $t("layout.AppHeader.nav.categories"),
     isActive: route.fullPath.includes(`${locale.value}/categories`),
     href: `${locale.value}/categories`,
     children: [
       {
-        label: "kitchen",
+        label: $t("layout.AppHeader.nav.kitchen"),
         isActive: route.fullPath === `${locale.value}/categories/kitchen`,
         href: `${locale.value}/categories/kitchen`,
         children: [],
       },
       {
-        label: "sports",
-        isActive: `${locale.value}/categories/sports`,
+        label: $t("layout.AppHeader.nav.sports"),
+        isActive: route.fullPath === `${locale.value}/categories/sports`,
         href: `${locale.value}/categories/sports`,
         children: [],
       },
       {
-        label: "toys",
+        label: $t("layout.AppHeader.nav.toys"),
         isActive: route.fullPath === `${locale.value}/categories/toys`,
         href: `${locale.value}/categories/toys`,
         children: [],
       },
       {
-        label: "electronics",
+        label: $t("layout.AppHeader.nav.electronics"),
         isActive: route.fullPath === `${locale.value}/categories/electronics`,
         href: `${locale.value}/categories/electronics`,
         children: [],
@@ -254,16 +281,26 @@ const NAV_LINKS = [
     ],
   },
   {
-    label: "about",
+    label: $t("layout.AppHeader.nav.about"),
     isActive: route.fullPath === `${locale.value}/about`,
     href: `${locale.value}/about`,
     children: [],
   },
   {
-    label: "contact",
+    label: $t("layout.AppHeader.nav.contact"),
     isActive: route.fullPath === `${locale.value}/contact`,
     href: `${locale.value}/contact`,
     children: [],
   },
 ];
+
+const handleToggleLang = (locale: "ar" | "en") => {
+  router.replace(switchLocalePath(locale));
+  useHead({
+    htmlAttrs: {
+      lang: locale,
+      dir: locale === "ar" ? "rtl" : "ltr",
+    },
+  });
+};
 </script>
